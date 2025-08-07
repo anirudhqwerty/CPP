@@ -16,15 +16,16 @@ bool primechecker(int n){
 }
 
 
-
 int main() {
     int n;
     cout<<"What is the number?"<<endl;
     cin>>n;
-
-    for (int i = 2; i < n; i++)
+    cout<<"The prime factors for this number are: ";
+    for (int i = 2; i <=n; i++)
     {
-        if(primechecker(i)) cout<<i<<endl;
+        if(n%i==0 && primechecker(i)==true){
+            cout<<i<<" ";
+        }
     }
     
     return 0;
